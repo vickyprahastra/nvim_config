@@ -13,6 +13,9 @@ Plug 'junegunn/fzf.vim'
 " Initialize plugin system
 call plug#end()
 
+" VIEWS
+set number " set relative number
+
 " SHORTCUTS
 noremap <C-b>   		:Buffers<CR>
 noremap <C-p>   		:FZF<CR>
