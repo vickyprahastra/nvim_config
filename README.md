@@ -2,6 +2,7 @@
 vicky nvim configuration
 
 **How to install**
+- 0 Install nvim
 - 1 Clone this repo
 - 2 Move to `~/.config/`
 - 3 Rename folder `nvim_config` to `nvim`
