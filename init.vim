@@ -13,6 +13,9 @@ Plug 'junegunn/fzf.vim'
 " Initialize plugin system
 call plug#end()
 
+" Config
+set noswapfile                                                " Disable Swap files
+
 " VIEWS
 set number " set relative number
 
@@ -22,6 +25,7 @@ noremap <C-p>   		:FZF<CR>
 noremap <C-g>   		:GFiles?<CR>
 noremap ff   			:Rg<CR>
 noremap <C-f>   		:Lines<CR>
+noremap ,,   			:NERDTreeToggle<CR>
 
 noremap <Tab>         :bn<CR>
 noremap <S-Tab>       :bp<CR>
