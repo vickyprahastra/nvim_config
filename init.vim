@@ -17,6 +17,7 @@ call plug#end()
 set noswapfile                                                " Disable Swap files
 
 " VIEWS
+set mouse=a " set active mouse
 set number " set relative number
 
 " SHORTCUTS
