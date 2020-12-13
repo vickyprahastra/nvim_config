@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " VIEWS
+set mouse=a " set active mouse
 set number " set relative number
 
 " SHORTCUTS
