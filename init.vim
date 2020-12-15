@@ -27,6 +27,7 @@ noremap <C-g>   		:GFiles?<CR>
 noremap ff   			:Rg<CR>
 noremap <C-f>   		:Lines<CR>
 noremap ,,   			:NERDTreeToggle<CR>
+noremap <C-t>   		:call Term()<CR>
 
 noremap <Tab>         :bn<CR>
 noremap <S-Tab>       :bp<CR>
@@ -34,9 +35,10 @@ noremap <C-PageDown>  :bn<CR>
 noremap <C-PageUp>    :bp<CR>
 
 " LIVE CHANGES
-noremap <silent> y :'<,'> !tee >(xsel -b)<cr>
-noremap <silent> p <ESC>"+p
-set modifiable
+"noremap <silent> y :'<,'> !tee >(xsel -b)<cr>
+noremap <silent> Y "+y
+noremap <silent> P <ESC>"+p
+"set modifiable
 "autocmd BufWinEnter * setlocal modifiable
 
 filetype plugin on
@@ -44,3 +46,8 @@ syntax on
 
 
 set shell=bash\ -l
+
+function! Term()
+	:terminal
+	:set ma
+endfunction
