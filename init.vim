@@ -32,3 +32,15 @@ noremap <Tab>         :bn<CR>
 noremap <S-Tab>       :bp<CR>
 noremap <C-PageDown>  :bn<CR>
 noremap <C-PageUp>    :bp<CR>
+
+" LIVE CHANGES
+noremap <silent> y :'<,'> !tee >(xsel -b)<cr>
+noremap <silent> p <ESC>"+p
+set modifiable
+"autocmd BufWinEnter * setlocal modifiable
+
+filetype plugin on
+syntax on
+
+
+set shell=bash\ -l
