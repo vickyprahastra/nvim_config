@@ -15,6 +15,11 @@ call plug#end()
 
 " Config
 set noswapfile                                                " Disable Swap files
+set expandtab                                                 " Indent 2 x Space
+set shiftwidth=2
+set softtabstop=2
+filetype plugin on
+syntax on
 
 " VIEWS
 set mouse=a " set active mouse
@@ -35,17 +40,8 @@ noremap <C-PageDown>  :bn<CR>
 noremap <C-PageUp>    :bp<CR>
 
 " LIVE CHANGES
-"noremap <silent> y :'<,'> !tee >(xsel -b)<cr>
 noremap <silent> Y "+y
 noremap <silent> P <ESC>"+p
-"set modifiable
-"autocmd BufWinEnter * setlocal modifiable
-
-filetype plugin on
-syntax on
-
-
-set shell=bash\ -l
 
 function! Term()
 	:terminal
