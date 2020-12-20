@@ -5,11 +5,14 @@ call plug#begin('~/.vim/plugged')
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'Yggdroot/indentLine'
 
+" Vim
 Plug 'miyakogi/seiya.vim'
 
 " Colorshemes
@@ -18,6 +21,7 @@ Plug 'tomasr/molokai' " monokai
 Plug 'sainnhe/sonokai' " sonokai
 Plug 'phanviet/vim-monokai-pro' " monkai_pro Jelek
 
+Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'crusoexia/vim-monokai'
@@ -36,7 +40,21 @@ syntax on
 colorscheme monokai
 
 " PLUGIN CONFIG
+let g:airline_powerline_fonts = 1
 let g:seiya_auto_enable=1
+let g:airline#extensions#tabline#enabled = 1
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
 
 " VIEWS
 set mouse=a " set active mouse
