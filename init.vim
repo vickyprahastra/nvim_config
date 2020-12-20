@@ -10,16 +10,33 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'miyakogi/seiya.vim'
+
+" Colorshemes
+Plug 'fratajczak/one-monokai-vim' " monokai
+Plug 'tomasr/molokai' " monokai
+Plug 'sainnhe/sonokai' " sonokai
+Plug 'phanviet/vim-monokai-pro' " monkai_pro Jelek
+
+Plug 'sheerun/vim-polyglot'
+
+Plug 'crusoexia/vim-monokai'
+Plug 'tpope/vim-rails'
+
 " Initialize plugin system
 call plug#end()
 
-" Config
+" CONFIG
 set noswapfile                                                " Disable Swap files
 set expandtab                                                 " Indent 2 x Space
 set shiftwidth=2
 set softtabstop=2
 filetype plugin on
 syntax on
+colorscheme monokai
+
+" PLUGIN CONFIG
+let g:seiya_auto_enable=1
 
 " VIEWS
 set mouse=a " set active mouse
@@ -66,7 +83,20 @@ function! NchStart()
         :execute NovochatServer()
         :execute NovochatSidekiq()
         :execute NovochatWebpack()
+        :let timerDelayOpenBrowser = timer_start(15000, 'OpenNovochatInBrowser')
 endfunction
+
+function! OpenNovochatInBrowser(timerDelayOpenBrowser)
+        let domainUrl = system('curl --silent http://127.0.0.1:4040/api/tunnels | jq ".tunnels[0].public_url"')
+        let domainUrl = substitute(domainUrl, '"', '', '')
+        let domainUrl =  substitute(domainUrl, '"', '', '')
+        let domainUrl =  substitute(domainUrl, 'https://', '', '')
+        let domainUrl =  substitute(domainUrl, 'http://', '', '')
+        let domainUrl =  substitute(domainUrl, '\n', '', '')
+        :execute "silent! !google-chrome-stable \https://" . domainUrl
+        :execute "silent! !google-chrome-stable http://localhost:3000"
+endfunction
+
 
 function! NovochatNgrok()
   "open file
@@ -78,12 +108,12 @@ function! NovochatNgrok()
   let domainUrl = substitute(domainUrl, '"', '', '')
   let domainUrl =  substitute(domainUrl, '"', '', '')
   let domainUrl =  substitute(domainUrl, 'https://', '', '')
+  let domainUrl =  substitute(domainUrl, 'http://', '', '')
   let domainUrl =  substitute(domainUrl, '\n', '', '')
 
   "replace DOMAIN_URL value
   :%s/DOMAIN_URL=\zs.*/\=domainUrl/g
   :w
-  :bd
 endfunction
 
 function! NovochatServer()
