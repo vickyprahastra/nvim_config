@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'zivyangll/git-blame.vim'
+Plug 'rhysd/git-messenger.vim'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -40,6 +42,9 @@ syntax on
 colorscheme monokai
 
 " PLUGIN CONFIG
+nnoremap <C-w>u :<C-u>call gitblame#echo()<CR>
+nnoremap <C-w>m <Plug>(git-messenger)
+
 " air-line
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
