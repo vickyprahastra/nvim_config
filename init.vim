@@ -34,86 +34,21 @@ Plug 'tpope/vim-rails'
 call plug#end()
 
 " CONFIG
-set noswapfile                                                " Disable Swap files
-set expandtab                                                 " Indent 2 x Space
+set noswapfile       " Disable Swap files
+set expandtab        " Indent 2 x Space
 set shiftwidth=2
 set softtabstop=2
 filetype plugin on
 syntax on
 colorscheme monokai
-
-" PLUGIN CONFIG
-let g:vimrubocop_keymap = 0
-nmap <Leader>r :RuboCop<CR>
-
-nnoremap <C-w>u :<C-u>call gitblame#echo()<CR>
-nnoremap <C-w>m <Plug>(git-messenger)
-
-" air-line
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ' '
-
-"let g:seiya_auto_enable=1
-let g:airline#extensions#tabline#enabled = 1
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-  \ 'Modified'  :'✹',
-  \ 'Staged'    :'✚',
-  \ 'Untracked' :'✭',
-  \ 'Renamed'   :'➜',
-  \ 'Unmerged'  :'═',
-  \ 'Deleted'   :'✖',
-  \ 'Dirty'     :'✗',
-  \ 'Ignored'   :'☒',
-  \ 'Clean'     :'✔︎',
-  \ 'Unknown'   :'?',
-  \ }
-
-" VIEWS
 set mouse=a " set active mouse
 set number " set relative number
 
+" PLUGIN CONFIG
+source ~/.config/nvim/plugin_config.vim
+
 " SHORTCUTS
-noremap <C-b>   		:Buffers<CR>
-noremap <C-p>   		:FZF<CR>
-noremap <C-g>   		:GFiles?<CR>
-noremap ff   			:Rg<CR>
-noremap <C-f>   		:Lines<CR>
-noremap ,,   			:NERDTreeToggle<CR>
-noremap ,f   			:NERDTreeFind<CR>
-noremap <C-t>   		:call Term()<CR>
+source ~/.config/nvim/shortcuts.vim
 
-noremap <Tab>         :bn<CR>
-noremap <S-Tab>       :bp<CR>
-noremap <C-PageDown>  :bn<CR>
-noremap <C-PageUp>    :bp<CR>
-
-" LIVE CHANGES
-noremap <silent> Y "+y
-noremap <silent> P <ESC>"+p
-
+" RUN SERVER FUNCTIONS
 source ~/.config/nvim/run_server.vim
