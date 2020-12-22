@@ -9,6 +9,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'zivyangll/git-blame.vim'
 Plug 'rhysd/git-messenger.vim'
 Plug 'ngmy/vim-rubocop'
+Plug 'tomtom/tcomment_vim'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
