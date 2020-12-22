@@ -15,3 +15,9 @@ noremap <C-PageUp>    :bp<CR>
 " LIVE CHANGES
 noremap <silent> Y "+y
 noremap <silent> P <ESC>"+p
+
+" RESIZE
+nnoremap <C-left> :vertical resize -5<cr>
+nnoremap <C-down> :resize +5<cr>
+nnoremap <C-up> :resize -5<cr>
+nnoremap <C-right> :vertical resize +5<cr>
