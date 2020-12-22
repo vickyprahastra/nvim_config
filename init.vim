@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'zivyangll/git-blame.vim'
 Plug 'rhysd/git-messenger.vim'
+Plug 'ngmy/vim-rubocop'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -42,6 +43,9 @@ syntax on
 colorscheme monokai
 
 " PLUGIN CONFIG
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
+
 nnoremap <C-w>u :<C-u>call gitblame#echo()<CR>
 nnoremap <C-w>m <Plug>(git-messenger)
 
@@ -100,6 +104,7 @@ noremap <C-g>   		:GFiles?<CR>
 noremap ff   			:Rg<CR>
 noremap <C-f>   		:Lines<CR>
 noremap ,,   			:NERDTreeToggle<CR>
+noremap ,f   			:NERDTreeFind<CR>
 noremap <C-t>   		:call Term()<CR>
 
 noremap <Tab>         :bn<CR>
