@@ -10,6 +10,8 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
+set encoding=UTF-8
+
 " unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'

@@ -10,6 +10,8 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'rhysd/git-messenger.vim'
 Plug 'ngmy/vim-rubocop'
 Plug 'tomtom/tcomment_vim'
+Plug 'ap/vim-css-color'
+Plug 'ryanoasis/vim-devicons'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -28,7 +30,7 @@ Plug 'phanviet/vim-monokai-pro' " monkai_pro Jelek
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
 
-Plug 'crusoexia/vim-monokai'
+Plug 'vickyprahastra/vim-monokai'
 Plug 'tpope/vim-rails'
 
 " Initialize plugin system
