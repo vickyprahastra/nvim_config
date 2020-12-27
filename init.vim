@@ -13,6 +13,9 @@ Plug 'tomtom/tcomment_vim'
 Plug 'ap/vim-css-color'
 Plug 'ryanoasis/vim-devicons'
 
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -55,3 +58,6 @@ source ~/.config/nvim/shortcuts.vim
 
 " RUN SERVER FUNCTIONS
 source ~/.config/nvim/run_server.vim
+
+" COC CONFIG
+source ~/.config/nvim/coc_config.vim
