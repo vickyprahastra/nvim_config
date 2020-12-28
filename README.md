@@ -9,3 +9,4 @@ vicky nvim configuration
 - 4 Install vim plug https://github.com/junegunn/vim-plug
 - 5 Run `nvim` & type command `:PlugInstall`
 - 6 Finish
+
