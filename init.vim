@@ -49,6 +49,7 @@ syntax on
 colorscheme monokai
 set mouse=a " set active mouse
 set number " set relative number
+autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
 " PLUGIN CONFIG
 source ~/.config/nvim/plugin_config.vim
