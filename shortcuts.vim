@@ -5,6 +5,7 @@ noremap ff   			:Rg<CR>
 noremap <C-f>   		:Lines<CR>
 noremap ,,   			:NERDTreeToggle<CR>
 noremap ,f   			:NERDTreeFind<CR>
+noremap <C-o>   		:BTags<CR>
 noremap <C-t>   		:call Term()<CR>
 
 noremap <Tab>         :bn<CR>
