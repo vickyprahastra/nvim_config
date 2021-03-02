@@ -36,7 +36,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ' '
 
 "let g:seiya_auto_enable=1
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Modified'  :'✹',
   \ 'Staged'    :'✚',

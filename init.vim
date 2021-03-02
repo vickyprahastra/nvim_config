@@ -51,6 +51,18 @@ set mouse=a " set active mouse
 set number " set relative number
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
+" turn hybrid line numbers on
+:set number relativenumber
+" :set nu rnu
+
+" turn hybrid line numbers off
+:set nonumber norelativenumber
+" :set nonu nornu
+
+" toggle hybrid line numbers
+:set number! relativenumber!
+" :set nu! rnu!
+
 " PLUGIN CONFIG
 source ~/.config/nvim/plugin_config.vim
 
