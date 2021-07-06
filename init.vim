@@ -36,10 +36,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vickyprahastra/vim-monokai'
 Plug 'tpope/vim-rails'
 
+Plug 'vim-ruby/vim-ruby'
+
 " Initialize plugin system
 call plug#end()
 
 " CONFIG
+set cursorline
 set noswapfile       " Disable Swap files
 set expandtab        " Indent 2 x Space
 set shiftwidth=2
@@ -52,15 +55,16 @@ set number " set relative number
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
 " turn hybrid line numbers on
-:set number relativenumber
+" :set number relativenumber
 " :set nu rnu
 
 " turn hybrid line numbers off
-:set nonumber norelativenumber
+" :set nonumber norelativenumber
 " :set nonu nornu
+:set number
 
 " toggle hybrid line numbers
-:set number! relativenumber!
+" :set number! relativenumber!
 " :set nu! rnu!
 
 " PLUGIN CONFIG
@@ -74,3 +78,7 @@ source ~/.config/nvim/run_server.vim
 
 " COC CONFIG
 source ~/.config/nvim/coc_config.vim
+
+set nocompatible      " We're running Vim, not Vi!
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
