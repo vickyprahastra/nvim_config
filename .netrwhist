@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/vic/dev/novocall_app/app/views/v1/widgets'
+let g:netrw_dirhist_6='/home/vic/dev/plazahub/lib'
 let g:netrw_dirhist_5='/home/vic/dev/novocall_app/app/views/events/partials'
 let g:netrw_dirhist_4='/home/vic/dev/plazahub/docker'
 let g:netrw_dirhist_3='/home/vic/dev/novochat_app/app/views/apps'

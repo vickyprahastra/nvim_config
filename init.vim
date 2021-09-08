@@ -38,6 +38,9 @@ Plug 'tpope/vim-rails'
 
 Plug 'vim-ruby/vim-ruby'
 
+" Fugitive is required for Conflicted
+Plug 'tpope/vim-fugitive'
+
 " Initialize plugin system
 call plug#end()
 
@@ -55,7 +58,7 @@ set number " set relative number
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
 " turn hybrid line numbers on
-" :set number relativenumber
+:set number relativenumber
 " :set nu rnu
 
 " turn hybrid line numbers off
@@ -75,6 +78,7 @@ source ~/.config/nvim/shortcuts.vim
 
 " RUN SERVER FUNCTIONS
 source ~/.config/nvim/run_server.vim
+source ~/.config/nvim/run_server_novocall.vim
 
 " COC CONFIG
 source ~/.config/nvim/coc_config.vim
