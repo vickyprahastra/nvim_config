@@ -4,8 +4,18 @@ function! Term()
 endfunction
 
 function NgrokStart()
-	:terminal bash -c "cd ~ && ./ngrok http 3000"
+	:terminal bash -c "cd ~ && ./ngrok http 3001"
 	:set ma
+	:execute Redis()
+endfunction
+
+function LTStart()
+	:terminal bash -c "cd ~ && lt --port 3000 --subdomain v3-lcltesting-ncappx21"
+	:execute Redis()
+endfunction
+
+function LTStart3001()
+	:terminal bash -c "cd ~ && lt --port 3001 --subdomain v3-lcltesting-ncappx21"
 	:execute Redis()
 endfunction
 
@@ -14,10 +24,22 @@ function! Redis()
   :set ma
 endfunction
 
-" START NOVOCHAT
-
+" How to run
+" exec NgrokStart
+" exec NchStart
 function! NchStart()
   :execute NovochatNgrok()
+  :execute NovochatServer()
+  :execute NovochatSidekiq()
+  :execute NovochatWebpack()
+  :let timerDelayOpenBrowser = timer_start(15000, 'OpenNovochatInBrowser')
+endfunction
+
+" How to run
+" exec LTStart
+" exec NchLTStart
+function! NchLTStart()
+  :execute NovochatLocalTunnel()
   :execute NovochatServer()
   :execute NovochatSidekiq()
   :execute NovochatWebpack()
@@ -35,6 +57,23 @@ function! OpenNovochatInBrowser(timerDelayOpenBrowser)
   :execute "silent! !google-chrome-stable http://localhost:3000"
 endfunction
 
+function! NovochatLocalTunnel()
+  "open file
+  :e ~/dev/novochat_app/.env
+
+  "Set domain url variable
+  let domainUrl = "https://v3-lcltesting-ncappx21.loca.lt"
+
+  let domainUrl = substitute(domainUrl, '"', '', '')
+  let domainUrl =  substitute(domainUrl, '"', '', '')
+  let domainUrl =  substitute(domainUrl, 'https://', '', '')
+  let domainUrl =  substitute(domainUrl, 'http://', '', '')
+  let domainUrl =  substitute(domainUrl, '\n', '', '')
+
+  "replace DOMAIN_URL value
+  :%s/DOMAIN_URL=\zs.*/\=domainUrl/g
+  :w
+endfunction
 
 function! NovochatNgrok()
   "open file
@@ -55,7 +94,7 @@ function! NovochatNgrok()
 endfunction
 
 function! NovochatServer()
-	:vsplit | terminal bash -c "cd ~/dev/novochat_app && rails server"
+	:vsplit | terminal bash -c "cd ~/dev/novochat_app && rails server -p 3001"
   :set ma
 endfunction
 

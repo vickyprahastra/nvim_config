@@ -1,9 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/vic/.config/regolith2/i3'
+let g:netrw_dirhist_3='/usr/share/regolith/i3/config.d'
+let g:netrw_dirhist_2='/home/vic/dev/novochat_app/app/controllers/api/v1'
+let g:netrw_dirhist_1='/home/vic/.ssh'
+let g:netrw_dirhist_0='/home/vic/dev/novochat_app/app/views/dashboard'
+let g:netrw_dirhist_9='/home/vic/dev/novochat_app/app/views/layouts'
+let g:netrw_dirhist_8='/home/vic/dev/novocall_app/db'
 let g:netrw_dirhist_7='/home/vic/dev/novocall_app/app/views/v1/widgets'
 let g:netrw_dirhist_6='/home/vic/dev/plazahub/lib'
 let g:netrw_dirhist_5='/home/vic/dev/novocall_app/app/views/events/partials'
-let g:netrw_dirhist_4='/home/vic/dev/plazahub/docker'
-let g:netrw_dirhist_3='/home/vic/dev/novochat_app/app/views/apps'
-let g:netrw_dirhist_2='/home/vic/dev/novochat_app/app/assets'
-let g:netrw_dirhist_1='/home/vic/dev/novochat_app/app/views/broadcasts'

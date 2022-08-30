@@ -10,7 +10,9 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-set encoding=UTF-8
+set guifont=Hack
+set guifont=Powerline
+set encoding=utf-8
 
 " unicode symbols
 let g:airline_left_sep = '»'
