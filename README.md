@@ -15,7 +15,7 @@ How to install
     - install Tags and Helptags
     - Fix nerdtree icons
         Download the package with:
-
+- run `nvim` and run `:PlugInstall`
 
 `https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip`
 
