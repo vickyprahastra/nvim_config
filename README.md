@@ -17,6 +17,14 @@ How to install
         Download the package with:
 - run `nvim` and run `:PlugInstall`
 
+- Install NVM (node js version manager)
+    - sudo apt update
+    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+    - source ~/.bashrc
+    - nvm --version
+    - nvm ls-remote
+    - nvm install [version.number]
+
 `https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip`
 
 Next, unzip the contents of the folder and copy the fonts to ~/.local/share/fonts/ with:
