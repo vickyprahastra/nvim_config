@@ -33,5 +33,5 @@ Next, unzip the contents of the folder and copy the fonts to ~/.local/share/font
 mkdir ~/.local/share/fonts
 unzip SourceCodePro.zip -d ~/.local/share/fonts/
 fc-cache ~/.local/share/fonts
-Config
+reboot/restart system
 ```
