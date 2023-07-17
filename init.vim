@@ -66,6 +66,9 @@ autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 " :set nonu nornu
 :set number
 
+" let g:coc_node_path = '/usr/bin'
+let g:coc_node_path = trim(system('which node'))
+
 " toggle hybrid line numbers
 " :set number! relativenumber!
 " :set nu! rnu!
