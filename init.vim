@@ -44,6 +44,8 @@ Plug 'vim-ruby/vim-ruby'
 " Fugitive is required for Conflicted
 Plug 'tpope/vim-fugitive'
 
+Plug 'junegunn/vim-easy-align'
+
 " Initialize plugin system
 call plug#end()
 
@@ -95,4 +97,9 @@ filetype indent on    " Enable filetype-specific indenting
 
 " set to 1, nvim will open the preview window after entering the Markdown buffer
 " default: 0
-let g:mkdp_auto_start = 1
+" let g:mkdp_auto_start = 1
+
+" visible code blocks (```) on markdown
+let g:vim_json_syntax_conceal = 0
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0

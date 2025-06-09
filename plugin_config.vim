@@ -77,3 +77,4 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
 " call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
 " call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
