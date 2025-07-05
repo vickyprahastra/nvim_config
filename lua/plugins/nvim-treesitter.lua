@@ -1,12 +1,17 @@
 local opts = {
   ensure_installed = {
-    'c',
-    'lua',
+    "python", 
+    "ninja", 
+    "rst", 
     'vim',
-    'vimdoc',
     'query',
     'markdown',
     'markdown_inline',
+    "json", 
+    "yaml", 
+    "bash", 
+    "html",
+    "javascript",
   },
 }
 
